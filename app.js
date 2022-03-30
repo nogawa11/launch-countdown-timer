@@ -17,10 +17,10 @@ const setLaunchInfo = () => {
 }
 
 const setDateTime = () => {
-  const now = moment();
-  dateInput.value = now.add(1, "days").format("YYYY-MM-DD");
-  dateInput.setAttribute("min", now.format("YYYY-MM-DD"));
-  dateInput.setAttribute("max", now.add(1, "years").format("YYYY-MM-DD"));
+  const currentDateTime = moment();
+  dateInput.value = currentDateTime.add(1, "days").format("YYYY-MM-DD");
+  dateInput.setAttribute("min", currentDateTime.format("YYYY-MM-DD"));
+  dateInput.setAttribute("max", currentDateTime.add(1, "years").format("YYYY-MM-DD"));
   timeInput.value = moment().format("HH:mm")
 }
 
@@ -41,7 +41,7 @@ const updateCountdown = (d, h, m, s) => {
 	seconds.innerText = formatInfo(s);
 };
 
-const countdownDisplay = (display) => {
+const displayCountdown = (display) => {
 	const main = document.querySelector(".main");
 	main.style.display = display;
 	const header = document.querySelector(".header-text");
@@ -53,12 +53,12 @@ const countdownDisplay = (display) => {
 };
 
 const calculate = (launch) => {
-	const now = moment();
-	duration = moment.duration(launch.diff(now));
+	const currentDateTime = moment();
+	duration = moment.duration(launch.diff(currentDateTime));
 	if (duration < 0) {
-		countdownDisplay("none");
+		displayCountdown("none");
 	}
-	const daysRemaining = launch.diff(now, "days");
+	const daysRemaining = launch.diff(currentDateTime, "days");
 	const hoursRemaining = duration.hours();
 	const minutesRemaining = duration.minutes();
 	const secondsRemaining = duration.seconds();
@@ -68,7 +68,6 @@ const calculate = (launch) => {
 const findRemainingTime = () => {
 	const localStorageLaunch = localStorage.getItem("launchDate");
 	const launch = setLaunchInfo();
-
 	if (localStorageLaunch) {
 		calculate(moment(localStorageLaunch));
 	} else {
@@ -97,7 +96,7 @@ const displayForm = (display) => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	setDateTime();
-	if (localStorage.getItem("launchDate") !== null) {
+	if (localStorage.getItem("launchDate")) {
 		displayForm("none");
 		countdownInfo();
 	} else {
@@ -111,7 +110,7 @@ startBtn.addEventListener("click", (event) => {
 	saveLaunch(launch);
 	countdownInfo();
   displayForm('none')
-  countdownDisplay('flex');
+  displayCountdown('flex');
 });
 
 updateBtn.addEventListener("click", (event) => {

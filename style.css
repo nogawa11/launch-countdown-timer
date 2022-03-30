@@ -41,7 +41,7 @@ body {
 }
 
 .header {
-  margin-top: 20vh;
+  margin-top: 18vh;
 }
 
 h1 {
@@ -69,13 +69,6 @@ h1 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.card-top-overlay {
-	background-color: rgba(29, 27, 38, 0.25);
-	position: relative;
-	border-bottom: 1px solid rgba(29, 27, 38, 0.1);
-	z-index: 1;
 }
 
 .card-top, .card-bottom, .card-overlay {
@@ -115,7 +108,7 @@ p {
 
 .socials {
   position: absolute;
-  bottom: 48px;
+  bottom: 10vh;
   display: flex;
   gap: 34px;
   z-index: 2;
@@ -123,7 +116,7 @@ p {
 
 .socials a {
   color: hsl(237, 18%, 59%);
-  font-size: 28px;
+  font-size: 32px;
   transition: 0.5s;
 }
 
@@ -140,6 +133,7 @@ p {
   font-size: 14px;
   background-color: rgba(0,0,0,0);
   border: none;
+  transition: 0.5s;
 }
 
 .btn-update:hover {
@@ -247,4 +241,103 @@ input[type='date'], input[type='time'] {
   position: absolute;
   right: -7px;
   top: 63px;
+}
+
+@media only screen and (max-width: 650px) {
+  .main {
+    gap: 3vw;
+  }
+
+  .card-info {
+    width: 100px;
+    height: 100px;
+  }
+
+  .countdown {
+    font-size: 56px;
+  }
+
+  .card-top, .card-bottom, .card-overlay {
+    width: 100px;
+    height: 50px;
+  }
+
+  .circle-left, .circle-right {
+    width: 10px;
+    height: 10px;
+  }
+  .circle-left {
+    top: 45px;
+  }
+
+  .circle-right {
+    top: 45px;
+  }
+
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-weight: 600;
+  }
+
+  .card-info {
+    width: 70px;
+    height: 70px;
+  }
+
+  .countdown {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .card-top, .card-bottom, .card-overlay {
+    width: 70px;
+    height: 35px;
+  }
+
+  .circle-left, .circle-right {
+    width: 10px;
+    height: 10px;
+  }
+  .circle-left {
+    top: 30px;
+  }
+
+  .circle-right {
+    top: 30px;
+  }
+
+  .btn-update {
+    font-size: 12px;
+  }
+
+  .socials a {
+    font-size: 32px;
+  }
+
+  .form {
+    width: 80vw;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .btn-start {
+    margin-top: 24px;
+    width: 100%;
+    margin-top: 14px;
+    padding: 8px;
+  }
 }
