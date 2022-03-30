@@ -156,7 +156,8 @@ p {
   z-index: 100;
   padding: 18px;
   border-radius: 8px;
-  box-shadow: 0px 0px 200px 200px rgb(0 0 0 / 70%);
+  box-shadow: 0px 0px 300px 300px rgb(0 0 0 / 70%);
+  width: 400px;
 }
 
 h2 {

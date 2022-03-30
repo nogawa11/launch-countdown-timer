@@ -17,7 +17,7 @@ const setLaunchInfo = () => {
 
 const setDateTime = () => {
   const now = moment();
-  dateInput.value = now.add(1, "d").format("YYYY-MM-DD");
+  dateInput.value = now.add(1, "days").format("YYYY-MM-DD");
   dateInput.setAttribute("min", now.format("YYYY-MM-DD"));
   dateInput.setAttribute("max", now.add(1, "years").format("YYYY-MM-DD"));
   timeInput.value = moment().format("HH:mm")
@@ -40,15 +40,14 @@ const updateCountdown = (d, h, m, s) => {
 	seconds.innerText = formatInfo(s);
 };
 
-const countdownDisplay = (display, text) => {
+const countdownDisplay = (display) => {
 	const main = document.querySelector(".main");
 	main.style.display = display;
-	const header = document.querySelector("h3");
-	header.innerText = text;
+	const header = document.querySelector(".header-text");
 	if (display === "none") {
-		header.classList.add("complete");
+		header.innerText = "Launch is complete";
 	} else {
-		header.classList.remove("complete");
+		header.innerText = "Launching soon";
 	}
 };
 
@@ -56,7 +55,7 @@ const calculate = (launch) => {
 	const now = moment();
 	duration = moment.duration(launch.diff(now));
 	if (duration < 0) {
-		countdownDisplay("none", "Launch is complete");
+		countdownDisplay("none");
 	}
 	const daysRemaining = launch.diff(now, "days");
 	const hoursRemaining = duration.hours();
@@ -111,6 +110,7 @@ startBtn.addEventListener("click", (event) => {
 	saveLaunch(launch);
 	countdownInfo();
   displayForm('none')
+  countdownDisplay('flex');
 });
 
 updateBtn.addEventListener("click", (event) => {
