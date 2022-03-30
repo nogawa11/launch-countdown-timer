@@ -160,6 +160,22 @@ p {
   width: 400px;
 }
 
+.btn-close {
+  color: #34364f;
+  background-color:hsl(237, 18%, 59%);
+  padding: 4px 7px;
+  border-radius: 50%;
+  border: 0;
+  position: fixed;
+  top: -10px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.btn-close:hover {
+  background-color:hsl(238, 13%, 42%);
+}
+
 h2 {
   margin: 0 0 16px 0;
   padding: 0;
@@ -190,7 +206,7 @@ label {
 }
 
 .btn-start:hover {
-  background-color: hsl(345, 68%, 58%);
+  background-color: hsl(345, 57%, 52%);
 }
 
 input {
@@ -212,4 +228,23 @@ input[type='date'], input[type='time'] {
 .form-title {
   display: flex;
   justify-content: center;
+}
+
+.circle-left, .circle-right {
+  background-color: #221E2B;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.circle-left {
+  position: absolute;
+  left: -7px;
+  top: 63px;
+}
+
+.circle-right {
+  position: absolute;
+  right: -7px;
+  top: 63px;
 }

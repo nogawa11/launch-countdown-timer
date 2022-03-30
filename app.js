@@ -7,6 +7,7 @@ const dateInput = document.querySelector("#date")
 const timeInput = document.querySelector("#time")
 const startBtn = document.querySelector(".btn-start")
 const updateBtn = document.querySelector(".btn-update")
+const closeBtn = document.querySelector(".btn-close")
 
 const setLaunchInfo = () => {
   const date = dateInput.value;
@@ -121,4 +122,9 @@ updateBtn.addEventListener("click", (event) => {
   const formattedTime = moment(storedDate).format('HH:mm')
   dateInput.value = formattedDate;
   timeInput.value = formattedTime;
+});
+
+closeBtn.addEventListener("click", (event) => {
+	event.preventDefault();
+  displayForm('none')
 });
