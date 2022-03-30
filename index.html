@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Launch countdown timer</title>
-</head>
-<body>
-  <div class="header">
-    <h1>We're launching soon</h1>
-  </div>
-  <div class="main">
-    <div class="countdown days">
-      <p>Days</p>
+    <title>Frontend Mentor | Launch countdown timer</title>
+  </head>
+  <body>
+    <form class="form">
+      <h2>Enter launch date and time</h2>
+      <label for="date">DATE</label>
+      <input type="date" id="date" name="date" required />
+      <label for="time">TIME</label>
+      <input type="time" id="time" name="time" required />
+      <button class="btn-start" type="submit">Begin Countdown</button>
+    </form>
+    <div class="header">
+      <h1>We're launching soon</h1>
     </div>
-    <div class="countdown hours">
-      <p>Hours</p>
+    <div class="main">
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-bottom"></div>
+        <div class="countdown days"></div>
+        <p>Days</p>
+      </div>
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-bottom"></div>
+        <div class="countdown hours"></div>
+        <p>Hours</p>
+      </div>
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-bottom"></div>
+        <div class="countdown minutes"></div>
+        <p>Minutes</p>
+      </div>
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-bottom"></div>
+        <div class="countdown seconds"></div>
+        <p>Seconds</p>
+      </div>
     </div>
-    <div class="countdown hours">
-      <p>Minutes</p>
+    <div class="socials">
+      <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
+      <a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a>
+      <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a>
     </div>
-    <div class="countdown hours">
-      <p>Seconds</p>
-    </div>
-  </div>
-  <div class="socials">
-    <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
-    <a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a>
-    <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a>
-  </div>
-</body>
+  </body>
 </html>
