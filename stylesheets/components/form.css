@@ -1,0 +1,39 @@
+.form {
+  background-color: #34364f;
+  position: absolute;
+  width: 400px;
+	left: 50%;
+  top: 50%;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 300px 300px rgb(0 0 0 / 70%);
+	transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  color: hsl(237, 18%, 59%);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+input {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(237, 18%, 59%);
+  padding: 2px 0;
+  border: 0;
+  border-radius: 4px;
+}
+
+input[type='date'], input[type='time'] {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+#date, #time {
+  margin-right: 8px;
+}

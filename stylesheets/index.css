@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('components/button.css');
+@import url('components/card.css');
+@import url('components/form.css');
+@import url('components/link.css');
+
+body {
+  background: rgb(40,33,48);
+  background: linear-gradient(0deg, rgba(40,33,48,1) 0%, rgba(29,27,38,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  font-family: 'Red Hat Text', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-image: url('../images/pattern-hills.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 25vh;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.stars {
+  background-image: url('../images/bg-stars.svg');
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  gap: 4vw;
+  margin-top: 5vh;
+}
+
+.header {
+  margin-top: 18vh;
+}
+
+h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+p {
+  color: hsl(237, 18%, 59%);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/*---------media queries---------*/
+@media only screen and (max-width: 650px) {
+  .main {
+    gap: 3vw;
+  }
+  .card-top, .card-bottom, .card-overlay {
+    width: 100px;
+    height: 50px;
+  }
+  .card-info {
+    width: 100px;
+    height: 100px;
+  }
+  .countdown {
+    font-size: 56px;
+  }
+  .circle-left, .circle-right {
+    width: 10px;
+    height: 10px;
+  }
+  .circle-left {
+    top: 45px;
+  }
+  .circle-right {
+    top: 45px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 6px;
+  }
+  h2 {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+  }
+  p {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .card-top, .card-bottom, .card-overlay {
+    width: 70px;
+    height: 35px;
+  }
+  .card-info {
+    width: 70px;
+    height: 70px;
+  }
+  .countdown {
+    font-size: 42px;
+  }
+  .circle-left, .circle-right {
+    width: 10px;
+    height: 10px;
+  }
+  .circle-left {
+    top: 30px;
+  }
+  .circle-right {
+    top: 30px;
+  }
+  .form {
+    width: 80vw;
+  }
+  input {
+    width: 100%;
+  }
+  .btn-update {
+    font-size: 12px;
+  }
+  .btn-start {
+    width: 100%;
+    padding: 8px;
+    margin-top: 14px;
+  }
+}

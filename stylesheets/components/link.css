@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  position: absolute;
+  bottom: 10vh;
+  gap: 34px;
+  z-index: 2;
+}
+
+.socials a {
+  color: hsl(237, 18%, 59%);
+  font-size: 32px;
+  transition: 0.5s;
+}
+
+.socials a:hover {
+  color: hsl(345, 95%, 68%);
+}

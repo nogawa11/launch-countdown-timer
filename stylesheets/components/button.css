@@ -1,0 +1,49 @@
+.btn-update {
+  background-color: rgba(0,0,0,0);
+  color: hsl(237, 18%, 59%);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 24px;
+  border: none;
+  transition: 0.5s;
+}
+
+.btn-update:hover {
+  color: hsl(345, 95%, 68%);
+  text-decoration: underline;
+}
+
+.btn-close {
+  background-color:hsl(237, 18%, 59%);
+  color: #34364f;
+  position: fixed;
+  right: -10px;
+  top: -10px;
+  padding: 4px 7px;
+  border: 0;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.btn-close:hover {
+  background-color:hsl(238, 13%, 42%);
+}
+
+.btn-start {
+  background-color: hsl(345, 95%, 68%);
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px;
+  border: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.btn-start:hover {
+  background-color: hsl(345, 57%, 52%);
+}
