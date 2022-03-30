@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
   position: relative;
   height: 100vh;
@@ -5,7 +7,12 @@ body {
   padding: 0;
   background: rgb(40,33,48);
   background: linear-gradient(0deg, rgba(40,33,48,1) 0%, rgba(29,27,38,1) 100%);
+  font-family: 'Red Hat Text', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .background {
   background-image: url('images/pattern-hills.svg');
   background-size: cover;
@@ -24,4 +31,184 @@ body {
   height: 100%;
   left: 0;
   width: 100%;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  gap: 4vw;
+  margin-top: 5vh;
+}
+
+.header {
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card-info {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  box-shadow: 0px 10px 0px 0px #181620;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  color: hsl(345, 95%, 68%);
+  font-size: 72px;
+  font-weight: 700;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card-top-overlay {
+	background-color: rgba(29, 27, 38, 0.25);
+	position: relative;
+	border-bottom: 1px solid rgba(29, 27, 38, 0.1);
+	z-index: 1;
+}
+
+.card-top, .card-bottom, .card-overlay {
+  background-color: #34364f;
+  width: 140px;
+  height: 70px;
+}
+
+.card-overlay {
+	background-color: rgba(32, 30, 41, 0.25);
+	position: relative;
+	border-bottom: 1px solid hsla(249, 16%, 16%, 0.102);
+	z-index: 1;
+}
+
+.card-top {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-bottom {
+  border-radius: 0 0 8px 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  color: hsl(237, 18%, 59%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.socials {
+  position: absolute;
+  bottom: 48px;
+  display: flex;
+  gap: 34px;
+  z-index: 2;
+}
+
+.socials a {
+  color: hsl(237, 18%, 59%);
+  font-size: 28px;
+  transition: 0.5s;
+}
+
+.socials a:hover {
+  color: hsl(345, 95%, 68%);
+}
+
+.btn-update {
+  margin-top: 24px;
+  color: hsl(237, 18%, 59%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+.btn-update:hover {
+  color: hsl(345, 95%, 68%);
+  text-decoration: underline;
+}
+
+.form {
+  background-color: #34364f;
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 200px 200px rgb(0 0 0 / 70%);
+}
+
+h2 {
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+label {
+  color: hsl(237, 18%, 59%);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.btn-start {
+  background-color: hsl(345, 95%, 68%);
+  border: 0;
+  border-radius: 4px;
+  padding: 4px;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: hsl(345, 68%, 58%);
+}
+
+input {
+  background-color: hsl(0, 0%, 96%);
+  border: 0;
+  color: hsl(237, 18%, 59%);
+  border-radius: 4px;
+  padding: 2px 0;
+}
+
+#date, #time {
+  margin-right: 8px;
+}
+
+input[type='date'], input[type='time'] {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
 }

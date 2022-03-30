@@ -19,7 +19,7 @@ const setDateTime = () => {
   const now = moment();
   dateInput.value = now.add(1, "d").format("YYYY-MM-DD");
   dateInput.setAttribute("min", now.format("YYYY-MM-DD"));
-  dateInput.setAttribute("max", now.add(3, "months").format("YYYY-MM-DD"));
+  dateInput.setAttribute("max", now.add(1, "years").format("YYYY-MM-DD"));
   timeInput.value = moment().format("HH:mm")
 }
 
