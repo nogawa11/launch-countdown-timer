@@ -1,0 +1,27 @@
+body {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: rgb(40,33,48);
+  background: linear-gradient(0deg, rgba(40,33,48,1) 0%, rgba(29,27,38,1) 100%);
+}
+.background {
+  background-image: url('images/pattern-hills.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  height: 25vh;
+  left: 0;
+  width: 100%;
+}
+
+.stars {
+  background-image: url('images/bg-stars.svg');
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+}
